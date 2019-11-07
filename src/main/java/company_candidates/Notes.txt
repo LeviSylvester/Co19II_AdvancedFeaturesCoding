@@ -1,0 +1,10 @@
+Tema: Conditiile si in Production
+Tema: Teste la 19II
+Tema: Vending Machine eventual
+
+cu fisiere json ObjectMapper
+txt cu BufferedWriter/BufferedReader
+
+in practica constructorii, get-erele si set-erele nu se testeaza, daca nu sunt diferite de implementarile "default"
+
+Lombok creeaza toate get-erele si set-erele automat

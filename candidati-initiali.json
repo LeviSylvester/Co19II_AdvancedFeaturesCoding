@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Andreas",
+    "levelOfCompetence": 10,
+    "status": "AWAITING_RESPONSE",
+    "departmentName": "MARKETING",
+    "gender": "M"
+  },
+  {
+    "name": "Bella",
+    "levelOfCompetence": 10,
+    "status": "AWAITING_RESPONSE",
+    "departmentName": "MARKETING",
+    "gender": "F"
+  },
+  {
+    "name": "Cynthia",
+    "levelOfCompetence": 5,
+    "status": "AWAITING_RESPONSE",
+    "departmentName": "MARKETING",
+    "gender": "F"
+  },
+  {
+    "name": "Dani",
+    "levelOfCompetence": 10,
+    "status": "AWAITING_RESPONSE",
+    "departmentName": "MARKETING",
+    "gender": "M"
+  },
+  {
+    "name": "Emilia",
+    "levelOfCompetence": 10,
+    "status": "AWAITING_RESPONSE",
+    "departmentName": "MARKETING",
+    "gender": "F"
+  },
+  {
+    "name": "Felicia",
+    "levelOfCompetence": 5,
+    "status": "AWAITING_RESPONSE",
+    "departmentName": "MARKETING",
+    "gender": "F"
+  },
+  {
+    "name": "Georg",
+    "levelOfCompetence": 10,
+    "status": "AWAITING_RESPONSE",
+    "departmentName": "PRODUCTION",
+    "gender": "M"
+  },
+  {
+    "name": "Hanna",
+    "levelOfCompetence": 10,
+    "status": "AWAITING_RESPONSE",
+    "departmentName": "PRODUCTION",
+    "gender": "F"
+  },
+  {
+    "name": "Irina",
+    "levelOfCompetence": 5,
+    "status": "AWAITING_RESPONSE",
+    "departmentName": "PRODUCTION",
+    "gender": "F"
+  },
+  {
+    "name": "Johnny",
+    "levelOfCompetence": 10,
+    "status": "AWAITING_RESPONSE",
+    "departmentName": "PRODUCTION",
+    "gender": "M"
+  },
+  {
+    "name": "Kami",
+    "levelOfCompetence": 10,
+    "status": "AWAITING_RESPONSE",
+    "departmentName": "PRODUCTION",
+    "gender": "F"
+  },
+  {
+    "name": "Lavinia",
+    "levelOfCompetence": 5,
+    "status": "AWAITING_RESPONSE",
+    "departmentName": "PRODUCTION",
+    "gender": "F"
+  }
+]

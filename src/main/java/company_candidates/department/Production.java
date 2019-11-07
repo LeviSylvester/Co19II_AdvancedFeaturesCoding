@@ -3,13 +3,18 @@ package company_candidates.department;
 import company_candidates.candidate.Candidate;
 import company_candidates.candidate.CandidateStatus;
 
+import static company_candidates.candidate.CandidateStatus.ACCEPTED;
+import static company_candidates.candidate.CandidateStatus.REJECTED;
 import static company_candidates.department.DepartmentName.PRODUCTION;
 
 public class Production extends Department {
     private static Production instance = new Production();
+    private int minNoOfPositionsWithMaxCompetenceLevel = getOpenPositions() * 20 / 100;
+    private int maxLevelOfCompetence = 10;
+    private int noOfAcceptedCandidatesWithMaxCompetenceLevel = 0;
 
-    public Production() {
-        super(PRODUCTION, 8, 3);
+    private Production() {
+        super(PRODUCTION, 8, 10);
     }
 
     public static Production getInstance() {
@@ -19,19 +24,21 @@ public class Production extends Department {
     @Override
     public CandidateStatus evaluateBasedOnCompetenceLevel(Candidate candidate) {
         if (candidate.getLevelOfCompetence() < this.getMinLevelOfCompetence()) {
-            candidate.setStatus(CandidateStatus.REJECTED);
-//            System.out.println(CandidateStatus.REJECTED);
-
+            return CandidateStatus.REJECTED;
         } else {
-            candidate.setStatus(CandidateStatus.ACCEPTED);
-
-//            System.out.println(CandidateStatus.ACCAPTED);
+            return ACCEPTED;
         }
-        return null;
-    }
+    }0
 
-//    @Override
-    public CandidateStatus evaluateBsedOnOtherCriteria(Candidate candidate){
-        return CandidateStatus.AWAITING_RESPONSE;
+    @Override
+    public CandidateStatus evaluateBasedOnOtherCriteria(Candidate candidate) {
+        if (candidate.getLevelOfCompetence() == maxLevelOfCompetence) {
+            noOfAcceptedCandidatesWithMaxCompetenceLevel++;
+            return ACCEPTED;
+        } else if (noOfAcceptedCandidatesWithMaxCompetenceLevel >= minNoOfPositionsWithMaxCompetenceLevel) {
+            return ACCEPTED;
+        } else {
+            return REJECTED;
+        }
     }
 }

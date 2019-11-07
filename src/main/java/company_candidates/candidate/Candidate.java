@@ -3,28 +3,24 @@ package company_candidates.candidate;
 import company_candidates.department.DepartmentName;
 
 public class Candidate {
-    private String name;
+    private String name; //toDo: full name
     private int levelOfCompetence;
     private CandidateStatus status;
-    private DepartmentName departmentName; //toDo change type? - solved
+    private DepartmentName departmentName;
     private Gender gender;
 
-    public Candidate(String name, int levelOfCompetence, DepartmentName departmentName, Gender gender) {
-        this.name = name;
-        this.levelOfCompetence = levelOfCompetence;
-        this.status = CandidateStatus.AWAITING_RESPONSE;
-        this.departmentName = departmentName;
-        this.gender = gender;
+    public Candidate() {
     }
 
-    @Override
-    public String toString() {
-        return "Candidate{" +
-                "name='" + name + '\'' +
-                ", levelOfCompetence=" + levelOfCompetence +
-                ", status=" + status +
-                ", departmentName='" + departmentName + '\'' + ", gender: " + gender +
-                '}';
+    public Candidate(String name,
+                     int levelOfCompetence,
+                     DepartmentName departmentName,
+                     Gender gender) {
+        this.name = name;
+        this.levelOfCompetence = levelOfCompetence;
+        this.departmentName = departmentName;
+        this.gender = gender;
+        this.status = CandidateStatus.AWAITING_RESPONSE;
     }
 
     public String getName() {
@@ -33,10 +29,6 @@ public class Candidate {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public Gender getGender() {
-        return gender;
     }
 
     public int getLevelOfCompetence() {
@@ -61,5 +53,24 @@ public class Candidate {
 
     public void setDepartmentName(DepartmentName departmentName) {
         this.departmentName = departmentName;
+    }
+
+    public Gender getGender() {
+        return gender;
+    }
+
+    public void setGender(Gender gender) {
+        this.gender = gender;
+    }
+
+    @Override
+    public String toString() {
+        return "\nCandidate{" +
+                "name='" + name + '\'' +
+                ", levelOfCompetence=" + levelOfCompetence +
+                ", status=" + status +
+                ", departmentName='" + departmentName + '\'' +
+                ", gender: " + gender +
+                '}';
     }
 }
